@@ -1,17 +1,17 @@
 #### Random dataset generator for IRI analysis creates metadata + prey abundance + prey volume ####
 
-generate_fish_iri_data <- function(
-    n_fish = 2700,
-    n_prey = 60,
-    seed = 123,
-    absence_prob = 0.35,
-    min_volume = 0.01,
-    max_volume = 1.00,
-    max_abundance = 20,
-    output_file = NULL
-) {
+
+{
+  n_fish = 2700
+  n_prey = 60
+  seed = 123
+  absence_prob = 0.35
+  min_volume = 0.01
+  max_volume = 1.00
+  max_abundance = 20
+  output_file = "02_rawdata/fish_iri_data.csv"
   
-  set.seed(seed)
+  set.seed(seed = seed) # for reproducibility
   
   # Metadata pools
   sampling_areas <- c("area_01", "area_02", "area_03", "area_04",
@@ -78,9 +78,8 @@ generate_fish_iri_data <- function(
     fish_data[[paste0("prey_vol_", i)]] <- volume_values
   }
   
-  if (!is.null("02_rawdata")) {
-    write.csv(fish_data, file = , row.names = FALSE)
+  {
+  write.csv(fish_data, file = output_file, row.names = FALSE)
   }
   
-  return(fish_data)
-}
+   }
