@@ -52,7 +52,7 @@
     season = sample(seasons_list, n_fish, replace = TRUE),
     sex = sample(sex_list, n_fish, replace = TRUE),
     class = sample(class_size, n_fish, replace = TRUE),
-    unique_id = sprintf("F%04d", 1:n_fish),
+    unique_id = sprintf("B%04d", 1:n_fish),
     species = sample(species_list, n_fish, replace = TRUE),
     stringsAsFactors = FALSE
   )
