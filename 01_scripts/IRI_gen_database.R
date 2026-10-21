@@ -9,7 +9,7 @@
   min_volume = 0.01
   max_volume = 1.00
   max_abundance = 20
-  output_file = "02_rawdata/fish_iri_data.csv"
+  output_file = "02_rawdata/generated_fish_data.csv"
   
   set.seed(seed = seed) # for reproducibility
   
